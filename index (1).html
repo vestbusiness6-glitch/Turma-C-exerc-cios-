@@ -1,182 +1,506 @@
 <!doctype html>
-<html lang="en"> 
- <head> 
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <meta name="google-site-verification" content="Z42uyfwIYE2BKmPo8rq_U56tefVXGc41oknqC_PUJDk" />
-  <title>TechNova Store — Best Tech Deals &amp; Accessories</title> 
-  <meta name="description" content="TechNova Store — melhores ofertas em teclados RGB, headsets surround e mouses gamers. Compare preços e compre com segurança via links oficiais."> 
-  <meta name="robots" content="index, follow"> 
-  <link rel="canonical" href="https://meusite.com/"> <!-- Open Graph --> 
-  <meta property="og:type" content="website"> 
-  <meta property="og:title" content="TechNova Store — Best Tech Deals &amp; Accessories"> 
-  <meta property="og:description" content="Encontre teclados, headsets e mouses com as melhores ofertas. Conheça os produtos recomendados pela TechSmart."> 
-  <meta property="og:url" content="https://meusite.com/"> 
-  <meta property="og:site_name" content="TechNovaStore"> 
-  <meta property="og:image" content="https://meusite.com/assets/og-image.jpg"> <!-- Twitter Card --> 
-  <meta name="twitter:card" content="summary_large_image"> 
-  <meta name="twitter:title" content="TechNova Store — Best Tech Deals &amp; Accessories"> 
-  <meta name="twitter:description" content="Encontre teclados, headsets e mouses com as melhores ofertas."> 
-  <meta name="twitter:image" content="https://meusite.com/assets/og-image.jpg"> <!-- Preconnect / font --> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"> <!-- Minimal critical CSS in head, rest kept small --> 
-  <style>
-    :root{--primary:#007bff;--primary-2:#00c6ff;--bg:#f5f6f8}
-    *{box-sizing:border-box}
-    body,html{margin:0;padding:0;font-family:'Poppins',sans-serif;background:var(--bg);overflow-x:hidden;color:#222}
-    a{color:inherit}
-    /* Preloader */
-    #preloader{position:fixed;inset:0;background:linear-gradient(135deg,var(--primary),var(--primary-2));display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column}
-    #preloader h1{color:#fff;font-size:2.4rem;margin:0;display:flex;flex-wrap:wrap;gap:0.2rem}
-    #preloader h1 span{opacity:0;transform:translateY(-30px);display:inline-block;animation:letterJump 1s forwards}
-    @keyframes letterJump{0%{opacity:0;transform:translateY(-30px) rotate(-20deg)}50%{opacity:1;transform:translateY(10px) rotate(10deg)}100%{opacity:1;transform:translateY(0) rotate(0)}}
-    /* Layout */
-    #site{display:none}
-    header{background:linear-gradient(90deg,var(--primary),var(--primary-2));color:#fff;padding:18px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.12)}
-    header h1{font-size:1.6rem;margin:0}
-    header p{margin:6px 0 0;font-size:0.95rem}
-    nav{display:flex;justify-content:center;background:#fff;border-bottom:1px solid #e6e6e6;padding:10px;flex-wrap:wrap;gap:10px}
-    nav a{text-decoration:none;color:#333;margin:0 12px;font-weight:600;transition:color .2s}
-    nav a:hover{color:var(--primary)}
-    section{padding:36px 20px;max-width:1200px;margin:auto}
-    .headline h2{font-size:1.8rem;color:var(--primary);text-align:center;margin:0 0 6px}
-    .headline p{text-align:center;margin:0 0 18px;color:#444}
-    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-    .product{background:#fff;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.06);padding:14px;text-align:center;transition:transform .25s}
-    .product:hover{transform:translateY(-6px)}
-    .product img{width:100%;height:200px;object-fit:cover;border-radius:8px;display:block}
-    .product h3{margin:12px 0 6px;font-size:1.05rem}
-    .product p{margin:0;color:#666}
-    .buy-btn{display:inline-block;padding:10px 18px;background:var(--primary);color:#fff;border-radius:8px;text-decoration:none;margin-top:10px;font-weight:700}
-    .buy-btn:focus{outline:3px solid rgba(0,123,255,0.25)}
-    .video-section iframe{width:100%;max-width:900px;height:400px;border-radius:12px;border:0;display:block;margin:18px auto;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
-    footer{background:#111;color:#fff;padding:18px;text-align:center;font-size:0.9rem}
-    /* Responsive tweaks */
-    @media(max-width:600px){#preloader h1{font-size:1.6rem} .product img{height:160px}}
-    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:8px;top:8px;width:auto;height:auto;background:#fff;padding:8px;border-radius:4px;box-shadow:0 4px 16px rgba(0,0,0,0.15)}
-  </style> 
- </head> 
- <body> <a class="skip-link" href="#main">Skip to content</a> <!-- Preloader / Animation --> 
-  <div id="preloader" aria-hidden="true"> 
-   <h1 id="preloader-text" aria-hidden="true"></h1> 
-   <p style="color:white;margin-top:10px;opacity:0.9">Welcome to TechNova Store</p> 
-  </div> <!-- Main Site --> 
-  <div id="site" role="main" aria-labelledby="site-title"> 
-   <header> 
-    <h1 id="site-title">TechNova Store</h1> 
-    <p>Your global shop for electronics and tech accessories</p> 
-   </header> 
-   <nav aria-label="Main navigation"> <a href="#products">Products</a> <a href="#video">Trailer</a> <a href="#faq">FAQ</a> 
-   </nav> 
-   <section id="products"> 
-    <div class="headline"> 
-     <h2>Top Tech Products</h2> 
-     <p>Best deals on keyboards, headsets, mice, and more!</p> 
-    </div> 
-    <div class="product-grid" id="product-list" aria-live="polite"></div> 
-   </section> 
-   <section id="video" class="video-section" aria-labelledby="video-heading"> 
-    <h2 id="video-heading">Watch Our Trailer</h2> <iframe src="https://www.youtube.com/embed/ZIPuaWKUQis" title="TechNovaStore Trailer" allowfullscreen loading="lazy"></iframe> 
-   </section> 
-   <section id="faq" aria-labelledby="faq-heading"> 
-    <h3 id="faq-heading">Frequently Asked Questions (FAQ)</h3> 
-    <p><strong>1. How can I buy a product?</strong><br>Click “Buy Now” to go to Amazon via affiliate link.</p> 
-    <p><strong>2. Can I buy from any country?</strong><br>Yes, Amazon global links allow purchases worldwide.</p> 
-    <p><strong>3. Is this site official?</strong><br>Yes, we are an official Amazon Affiliate site promoting verified products.</p> 
-   </section> 
-   <footer>
-     © 2025 TechNovaStore. All rights reserved. 
-   </footer> 
-  </div> <!-- Product data and scripts --> 
-  <script>
-    // === Product data
-    const produtos = [
-      { id: "p1", nome: "RGB Mechanical Keyboard", preco: "$49.99", imagem: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg", link: "#", availability: "InStock", brand: "Generic" },
-      { id: "p2", nome: "Surround Sound Headset", preco: "$59.99", imagem: "https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1500_.jpg", link: "#", availability: "InStock", brand: "Generic" },
-      { id: "p3", nome: "Gaming Mouse", preco: "$29.99", imagem: "https://m.media-amazon.com/images/I/61k5+JAXeDL._AC_SL1500_.jpg", link: "#", availability: "InStock", brand: "Generic" }
-    ];
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Portal da Turma — Exercícios e Entregas</title>
+<style>
+  :root{--card-bg:#fff;--muted:#666;--accent:#2563eb}
+  body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:18px; max-width:1100px;}
+  h1{text-align:center;margin-bottom:8px}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .card{background:var(--card-bg);border:1px solid #e6e6e6;padding:14px;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
+  label{font-weight:600;font-size:13px}
+  input,select,textarea,button{font-size:14px;padding:8px;border-radius:8px;border:1px solid #d0d0d0;box-sizing:border-box}
+  textarea{min-height:80px;resize:vertical}
+  button{cursor:pointer;background:var(--accent);color:#fff;border:none}
+  .muted{color:var(--muted);font-size:13px}
+  .left{flex:1 1 360px}.right{flex:1 1 520px}
+  .exercise{border:1px solid #f0f0f0;padding:12px;margin:12px 0;border-radius:8px}
+  .actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  .btn-ghost{background:#fff;color:var(--accent);border:1px solid #cfe0ff}
+  .file-btn{display:inline-block;padding:8px 12px;border-radius:8px;background:#f3f4f6;color:#111;border:1px dashed #cfcfcf;cursor:pointer}
+  .small{font-size:13px}
+  .solutions{background:#fbfbfd;border:1px solid #f0f0f5;padding:8px;border-radius:8px;margin-top:10px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .top-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+  .danger{background:#ef4444}
+  footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+  @media(max-width:800px){.left,.right{flex:1 1 100%}}
+</style>
+</head>
+<body>
 
-    // === Render products (with lazy loading and accessibility)
-    const container = document.getElementById('product-list');
-    produtos.forEach(prod => {
-      const card = document.createElement('article');
-      card.className = 'product';
-      card.innerHTML = `
-        <img src="${prod.imagem}" alt="${prod.nome}" loading="lazy" width="600" height="400" />
-        <h3>${prod.nome}</h3>
-        <p>${prod.preco}</p>
-        <a href="${prod.link}" class="buy-btn" rel="noopener noreferrer" aria-label="Buy ${prod.nome}">Buy Now</a>
-      `;
-      container.appendChild(card);
-    });
+<h1>PORTAL DA TURMA — Exercícios e Entregas</h1>
 
-    // === Preloader text animation
-    const text = "TechNova Store";
-    const preloaderText = document.getElementById('preloader-text');
-    text.split("").forEach((char, i) => {
-      const span = document.createElement('span');
-      span.textContent = char;
-      span.style.animationDelay = `${i * 0.08}s`;
-      preloaderText.appendChild(span);
-    });
+<div class="top-controls card">
+  <div>
+    <label>Você é:</label><br>
+    <select id="roleSelect">
+      <option value="student">Aluno</option>
+      <option value="teacher">Professor</option>
+    </select>
+  </div>
 
-    // Hide preloader after animation and make site visible (use reduced time for real content)
-    window.addEventListener('load', () => {
-      // ensure minimum animation time for UX
-      setTimeout(() => {
-        document.getElementById('preloader').style.display = 'none';
-        document.getElementById('site').style.display = 'block';
-        document.getElementById('site').focus();
-      }, 900); // 0.9s after load (adjust if needed)
-    });
+  <div>
+    <label>Filtrar Disciplina:</label><br>
+    <select id="filterSubject">
+      <option value="">— Todas —</option>
+    </select>
+  </div>
 
-    // === Dynamic JSON-LD generation for SEO (WebSite, Organization, and Products)
-    (function generateJSONLD(){
-      const baseUrl = 'https://meusite.com'; // <<< replace with your real domain
-      const website = {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": baseUrl,
-        "name": "TechNova Store",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": baseUrl + "/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+  <div style="flex:1">
+    <label>Pesquisar (título / descrição):</label><br>
+    <input id="searchInput" placeholder="Pesquisar...">
+  </div>
+
+  <div style="margin-left:auto">
+    <label>Opções:</label><br>
+    <button id="clearStorageBtn" class="btn-ghost" style="background:#fff;color:#333;border:1px solid #eee">Limpar dados</button>
+  </div>
+</div>
+
+<div class="row">
+  <!-- FORMULÁRIOS -->
+  <div class="card left" id="leftCard">
+    <!-- PROFESSOR -->
+    <div id="teacherForm" style="display:none">
+      <h3>Professor — Enviar exercício (por disciplina)</h3>
+      <div style="margin-top:8px">
+        <label>Disciplina:</label><br>
+        <select id="teacherSubject"></select>
+      </div>
+
+      <div style="margin-top:8px">
+        <label>Você (Professor da disciplina):</label><br>
+        <input id="teacherLabel" placeholder="Professor da disciplina (fixo)">
+        <div class="muted" style="margin-top:6px">Não é necessário inserir nome real. Apenas para identificação rápida.</div>
+      </div>
+
+      <div style="margin-top:8px">
+        <label>Título do exercício:</label><br>
+        <input id="exerciseTitle" placeholder="Ex: Lista 1 — Álgebra">
+      </div>
+
+      <div style="margin-top:8px">
+        <label>Descrição / instruções:</label><br>
+        <textarea id="exerciseDesc" placeholder="Detalhes do exercício, prazo, observações..."></textarea>
+      </div>
+
+      <div style="margin-top:8px">
+        <label>Anexar arquivo (qualquer formato):</label><br>
+        <!-- input escondido, botão estilizado chama file picker -->
+        <input type="file" id="exerciseFile" style="display:none">
+        <div>
+          <span id="exerciseFileName" class="muted small">Nenhum arquivo selecionado</span>
+          <button id="pickExerciseFile" type="button" class="file-btn" style="margin-left:10px">Escolher arquivo</button>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <button id="sendExerciseBtn">Publicar exercício</button>
+      </div>
+    </div>
+
+    <!-- ALUNO -->
+    <div id="studentForm" style="display:none">
+      <h3>Aluno — Enviar solução</h3>
+      <div class="muted">1) Selecione um exercício na lista à direita → 2) Preencha seus dados e anexe arquivo → 3) Envie.</div>
+
+      <div style="margin-top:10px">
+        <label>Exercício selecionado:</label><br>
+        <div id="selectedExerciseInfo" class="muted">Nenhum exercício selecionado</div>
+      </div>
+
+      <div style="margin-top:10px">
+        <label>Nome completo:</label><br>
+        <input id="studentFullName" placeholder="Seu nome completo">
+      </div>
+
+      <div style="margin-top:10px">
+        <label>Número do aluno (matrícula):</label><br>
+        <input id="studentNumber" placeholder="Número / matrícula">
+      </div>
+
+      <div style="margin-top:10px">
+        <label>Turma:</label><br>
+        <input id="studentClass" placeholder="Ex: 3ºA">
+      </div>
+
+      <div style="margin-top:10px">
+        <label>Anexar arquivo da solução (qualquer formato):</label><br>
+        <input type="file" id="solutionFile" style="display:none">
+        <div>
+          <span id="solutionFileName" class="muted small">Nenhum arquivo selecionado</span>
+          <button id="pickSolutionFile" type="button" class="file-btn" style="margin-left:10px">Escolher arquivo</button>
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+        <label>Observação (opcional):</label><br>
+        <textarea id="solutionMsg" placeholder="Observações..."></textarea>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button id="sendSolutionBtn">Enviar solução</button>
+        <button id="cancelSelectionBtn" class="btn-ghost" type="button" style="background:#fff;color:#333;border:1px solid #eee">Cancelar seleção</button>
+      </div>
+    </div>
+
+    <div style="margin-top:16px" class="muted small">
+      Observação: os botões "Escolher arquivo" abrem diretamente o armazenamento do seu dispositivo (telefone/computador).
+    </div>
+  </div>
+
+  <!-- LISTA DE EXERCÍCIOS -->
+  <div class="card right">
+    <h3>Lista de exercícios</h3>
+    <div id="exercisesContainer" class="muted">Carregando...</div>
+  </div>
+</div>
+
+<footer>Dados salvos localmente no seu dispositivo (localStorage). Nenhum servidor envolvido.</footer>
+
+<script>
+/* ========= CONFIGURAÇÃO DE DISCIPLINAS ========== */
+/* Use a lista solicitada. Cada disciplina tem apenas 1 professor (identificação genérica). */
+const SUBJECTS = [
+  'Matemática',
+  'Português',
+  'Inglês',
+  'Francês',
+  'Biologia',
+  'Integração Social',
+  'Filosofia',
+  'Empreendedorismo',
+  'Educação Física'
+];
+
+/* Chave do localStorage */
+const STORAGE_KEY = 'portal_turma_exercises_v4';
+
+/* Estado local */
+let data = loadData(); // array de exercícios
+let selectedExerciseId = null;
+
+/* Elementos */
+const roleSelect = document.getElementById('roleSelect');
+const filterSubject = document.getElementById('filterSubject');
+const searchInput = document.getElementById('searchInput');
+
+const teacherForm = document.getElementById('teacherForm');
+const studentForm = document.getElementById('studentForm');
+
+const teacherSubject = document.getElementById('teacherSubject');
+const teacherLabel = document.getElementById('teacherLabel');
+const exerciseTitle = document.getElementById('exerciseTitle');
+const exerciseDesc = document.getElementById('exerciseDesc');
+const exerciseFile = document.getElementById('exerciseFile');
+const pickExerciseFile = document.getElementById('pickExerciseFile');
+const exerciseFileName = document.getElementById('exerciseFileName');
+const sendExerciseBtn = document.getElementById('sendExerciseBtn');
+
+const selectedExerciseInfo = document.getElementById('selectedExerciseInfo');
+const studentFullName = document.getElementById('studentFullName');
+const studentNumber = document.getElementById('studentNumber');
+const studentClass = document.getElementById('studentClass');
+const solutionFile = document.getElementById('solutionFile');
+const pickSolutionFile = document.getElementById('pickSolutionFile');
+const solutionFileName = document.getElementById('solutionFileName');
+const solutionMsg = document.getElementById('solutionMsg');
+const sendSolutionBtn = document.getElementById('sendSolutionBtn');
+const cancelSelectionBtn = document.getElementById('cancelSelectionBtn');
+
+const exercisesContainer = document.getElementById('exercisesContainer');
+
+const clearStorageBtn = document.getElementById('clearStorageBtn');
+
+/* POPULAR selects */
+function populateSubjectSelects(){
+  SUBJECTS.forEach(s => {
+    const o1 = document.createElement('option'); o1.value = s; o1.textContent = s;
+    filterSubject.appendChild(o1);
+    const o2 = document.createElement('option'); o2.value = s; o2.textContent = s;
+    teacherSubject.appendChild(o2);
+  });
+}
+populateSubjectSelects();
+
+/* Carregar e salvar dados */
+function loadData(){
+  try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+  catch(e){ return []; }
+}
+function saveData(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+/* UTIL: converter arquivo para base64 (mantém mime e nome) */
+function fileToBase64(file){
+  return new Promise((resolve,reject)=>{
+    if(!file) return resolve(null);
+    const reader = new FileReader();
+    reader.onload = () => resolve({ name: file.name, mime: file.type, data: reader.result });
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+/* BOTÕES de escolher arquivo (mostram picker do dispositivo) */
+pickExerciseFile.addEventListener('click', ()=> exerciseFile.click());
+exerciseFile.addEventListener('change', ()=> {
+  exerciseFileName.textContent = exerciseFile.files[0] ? exerciseFile.files[0].name : 'Nenhum arquivo selecionado';
+});
+
+pickSolutionFile.addEventListener('click', ()=> solutionFile.click());
+solutionFile.addEventListener('change', ()=> {
+  solutionFileName.textContent = solutionFile.files[0] ? solutionFile.files[0].name : 'Nenhum arquivo selecionado';
+});
+
+/* Limpar storage */
+clearStorageBtn.addEventListener('click', ()=>{
+  if(!confirm('Apagar todos os exercícios e soluções do armazenamento local?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  data = [];
+  selectedExerciseId = null;
+  renderExercises();
+  alert('Dados apagados.');
+});
+
+/* Mudar papel (professor / aluno) */
+roleSelect.addEventListener('change', updateRoleUI);
+function updateRoleUI(){
+  const role = roleSelect.value;
+  teacherForm.style.display = role === 'teacher' ? 'block' : 'none';
+  studentForm.style.display = role === 'student' ? 'block' : 'none';
+  // limpar seleção de exercício para aluno quando mudar
+  selectedExerciseId = null;
+  selectedExerciseInfo.textContent = 'Nenhum exercício selecionado';
+  renderExercises();
+}
+updateRoleUI();
+
+/* PROFESSOR: publicar exercício */
+sendExerciseBtn.addEventListener('click', async ()=>{
+  const subj = teacherSubject.value;
+  const profLabel = teacherLabel.value.trim() || ('Professor de ' + subj);
+  const title = exerciseTitle.value.trim();
+  const desc = exerciseDesc.value.trim();
+  const file = exerciseFile.files[0] || null;
+
+  if(!title || !desc) return alert('Preencha título e descrição do exercício.');
+
+  const fileObj = await fileToBase64(file);
+
+  const ex = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2,6),
+    subject: subj,
+    professorLabel: profLabel,
+    title,
+    desc,
+    file: fileObj, // pode ser null
+    createdAt: new Date().toISOString(),
+    solutions: [] // array de soluções
+  };
+
+  data.unshift(ex);
+  saveData();
+  // limpar form
+  exerciseTitle.value=''; exerciseDesc.value=''; exerciseFile.value=''; exerciseFileName.textContent='Nenhum arquivo selecionado';
+  alert('Exercício publicado.');
+  renderExercises();
+});
+
+/* ALUNO: enviar solução (para exercício selecionado) */
+sendSolutionBtn.addEventListener('click', async ()=>{
+  if(!selectedExerciseId) return alert('Selecione um exercício na lista antes de enviar sua solução.');
+  const name = studentFullName.value.trim();
+  const number = studentNumber.value.trim();
+  const klass = studentClass.value.trim();
+  const msg = solutionMsg.value.trim();
+  const file = solutionFile.files[0] || null;
+
+  if(!name || !number || !klass) return alert('Preencha nome completo, número e turma antes de enviar.');
+
+  const fileObj = await fileToBase64(file);
+
+  const sol = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2,6),
+    studentName: name,
+    studentNumber: number,
+    studentClass: klass,
+    msg,
+    file: fileObj,
+    sentAt: new Date().toISOString()
+  };
+
+  const idx = data.findIndex(x => x.id === selectedExerciseId);
+  if(idx === -1) return alert('Exercício selecionado não encontrado.');
+
+  data[idx].solutions.unshift(sol);
+  saveData();
+
+  // limpar form aluno
+  studentFullName.value=''; studentNumber.value=''; studentClass.value=''; solutionMsg.value=''; solutionFile.value=''; solutionFileName.textContent='Nenhum arquivo selecionado';
+  selectedExerciseId = null;
+  selectedExerciseInfo.textContent = 'Nenhum exercício selecionado';
+  alert('Solução enviada — registrada com nome e número.');
+  renderExercises();
+});
+
+/* Cancelar seleção (aluno) */
+cancelSelectionBtn.addEventListener('click', ()=>{
+  selectedExerciseId = null;
+  selectedExerciseInfo.textContent = 'Nenhum exercício selecionado';
+  renderExercises();
+});
+
+/* DOWNLOAD helper */
+function downloadBase64(fileObj){
+  if(!fileObj || !fileObj.data) { alert('Arquivo não disponível.'); return; }
+  const a = document.createElement('a');
+  a.href = fileObj.data;
+  a.download = fileObj.name || 'download';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+/* RENDER: lista de exercícios */
+function renderExercises(){
+  // make sure data variable used (reload in case changed)
+  data = loadData();
+
+  const role = roleSelect.value;
+  const filter = filterSubject.value;
+  const q = (searchInput.value || '').trim().toLowerCase();
+
+  let items = data.slice(); // clone
+  if(filter) items = items.filter(x => x.subject === filter);
+  if(q) items = items.filter(x => (x.title + ' ' + x.desc).toLowerCase().includes(q));
+
+  if(items.length === 0){
+    exercisesContainer.innerHTML = '<div class="muted">Nenhum exercício encontrado.</div>';
+    return;
+  }
+
+  exercisesContainer.innerHTML = '';
+  items.forEach(ex => {
+    const box = document.createElement('div');
+    box.className = 'exercise';
+
+    // header
+    const hdr = document.createElement('div');
+    hdr.innerHTML = `<strong>${escapeHtml(ex.title)}</strong> <span class="small">[${escapeHtml(ex.subject)}]</span>
+      <div class="muted small">${escapeHtml(ex.professorLabel)} — ${new Date(ex.createdAt).toLocaleString()}</div>
+      <div style="margin-top:8px">${escapeHtml(ex.desc)}</div>`;
+    box.appendChild(hdr);
+
+    // arquivo exercício
+    if(ex.file){
+      const fbtn = document.createElement('button');
+      fbtn.className = 'btn-ghost';
+      fbtn.textContent = 'Baixar exercício (' + ex.file.name + ')';
+      fbtn.onclick = ()=> downloadBase64(ex.file);
+      fbtn.style.background = '#fff'; fbtn.style.color = '#111'; fbtn.style.border = '1px solid #eee'; fbtn.style.padding='6px 10px';
+      box.appendChild(fbtn);
+    }
+
+    // actions
+    const actions = document.createElement('div');
+    actions.className = 'actions';
+
+    // For teacher: view solutions and remove
+    if(role === 'teacher'){
+      const viewBtn = document.createElement('button');
+      viewBtn.textContent = 'Ver soluções (' + (ex.solutions.length || 0) + ')';
+      viewBtn.onclick = ()=> toggleSolutions(box, ex.id);
+      actions.appendChild(viewBtn);
+
+      const removeBtn = document.createElement('button');
+      removeBtn.textContent = 'Remover exercício';
+      removeBtn.style.background = '#ef4444';
+      removeBtn.onclick = ()=>{
+        if(!confirm('Remover este exercício?')) return;
+        data = data.filter(d => d.id !== ex.id);
+        saveData();
+        renderExercises();
       };
+      actions.appendChild(removeBtn);
+    }
 
-      const organization = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TechNova Store",
-        "url": baseUrl,
-        "logo": baseUrl + "/assets/logo.png",
-        "sameAs": []
+    // For student: select exercise to send solution
+    if(role === 'student'){
+      const selectBtn = document.createElement('button');
+      const isSelected = selectedExerciseId === ex.id;
+      selectBtn.textContent = isSelected ? 'Exercício selecionado' : 'Selecionar exercício';
+      selectBtn.onclick = ()=>{
+        selectedExerciseId = ex.id;
+        selectedExerciseInfo.textContent = ex.title + ' [' + ex.subject + ']';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        renderExercises();
       };
+      selectBtn.style.background = isSelected ? '#10b981' : undefined;
+      actions.appendChild(selectBtn);
+    }
 
-      const productItems = produtos.map(p => ({
-        "@type": "Product",
-        "@id": baseUrl + "/#"+p.id,
-        "name": p.nome,
-        "image": [p.imagem],
-        "brand": { "@type": "Brand", "name": p.brand },
-        "offers": {
-          "@type": "Offer",
-          "url": baseUrl,
-          "price": p.preco.replace('$',''),
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/" + p.availability
-        }
-      }));
+    box.appendChild(actions);
 
-      const graph = [website, organization, ...productItems];
+    // solutions panel placeholder (for professor)
+    const solPanel = document.createElement('div');
+    solPanel.className = 'solutions';
+    solPanel.style.display = 'none';
+    solPanel.id = 'sol_' + ex.id;
+    box.appendChild(solPanel);
 
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2);
-      document.head.appendChild(script);
-    })();
-  </script> 
- 
-</body></html>
+    exercisesContainer.appendChild(box);
+  });
+}
+
+/* Toggle panel de soluções para professor */
+function toggleSolutions(containerBox, exId){
+  const panel = containerBox.querySelector('#sol_' + exId) || document.getElementById('sol_' + exId);
+  if(!panel) return;
+  if(panel.style.display === 'block'){ panel.style.display='none'; panel.innerHTML=''; return; }
+  // montar conteúdo
+  const ex = data.find(x => x.id === exId);
+  panel.innerHTML = `<strong>Soluções (${ex.solutions.length})</strong>`;
+  if(ex.solutions.length === 0){
+    panel.innerHTML += '<div class="muted">Nenhuma solução enviada ainda.</div>';
+  } else {
+    ex.solutions.forEach(sol => {
+      const div = document.createElement('div');
+      div.style.borderTop = '1px solid #eee';
+      div.style.paddingTop = '8px';
+      div.innerHTML = `<div><b>${escapeHtml(sol.studentName)}</b> — Nº: ${escapeHtml(sol.studentNumber)} — Turma: ${escapeHtml(sol.studentClass)}</div>
+                       <div class="muted small">${new Date(sol.sentAt).toLocaleString()}</div>
+                       <div style="margin-top:6px">${escapeHtml(sol.msg)}</div>`;
+      panel.appendChild(div);
+      if(sol.file){
+        const db = document.createElement('button');
+        db.textContent = 'Baixar (' + sol.file.name + ')';
+        db.style.marginTop = '8px';
+        db.onclick = ()=> downloadBase64(sol.file);
+        panel.appendChild(db);
+      }
+    });
+  }
+  panel.style.display = 'block';
+}
+
+/* Escape HTML simples */
+function escapeHtml(s){ if(s===null||s===undefined) return ''; return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+
+/* FILTROS */
+filterSubject.addEventListener('change', renderExercises);
+searchInput.addEventListener('input', ()=> { if(window._to) clearTimeout(window._to); window._to = setTimeout(renderExercises, 150); });
+
+/* Inicializar */
+renderExercises();
+
+/* Expõe uma função para recarregar (útil se editar localStorage manualmente) */
+window.portalReload = ()=> { data = loadData(); renderExercises(); };
+
+</script>
+</body>
+</html>
